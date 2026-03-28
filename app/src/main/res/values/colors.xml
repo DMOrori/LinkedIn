@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="linkedin_blue">#0A66C2</color>
+    <color name="linkedin_bg_gray">#F3F2EF</color>
+    <color name="linkedin_text_gray">#666666</color>
+    <color name="linkedin_divider">#EBEBEB</color>
 </resources>

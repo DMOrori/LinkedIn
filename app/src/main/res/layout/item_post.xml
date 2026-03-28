@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_network"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
+
+        <TextView
+            android:id="@+id/tvAuthorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Author Name"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProfile"
+            app:layout_constraintTop_toTopOf="@id/ivProfile" />
+
+        <TextView
+            android:id="@+id/tvAuthorHeadline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Author Headline"
+            android:textColor="@color/linkedin_text_gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvAuthorName"
+            app:layout_constraintTop_toBottomOf="@id/tvAuthorName" />
+
+        <TextView
+            android:id="@+id/tvTimeAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1h"
+            android:textColor="@color/linkedin_text_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvAuthorName"
+            app:layout_constraintTop_toBottomOf="@id/tvAuthorHeadline" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="12dp"
+            android:text="Post content goes here..."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+        <ImageView
+            android:id="@+id/ivPostImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/linkedin_divider"
+            app:layout_constraintTop_toBottomOf="@id/ivPostImage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <TextView
+                android:id="@+id/btnLike"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Like"
+                android:textColor="@color/linkedin_text_gray"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_like" />
+
+            <TextView
+                android:id="@+id/btnComment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Comment"
+                android:textColor="@color/linkedin_text_gray"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_comment" />
+
+            <TextView
+                android:id="@+id/btnRepost"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Repost"
+                android:textColor="@color/linkedin_text_gray"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_repost" />
+
+            <TextView
+                android:id="@+id/btnSend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Send"
+                android:textColor="@color/linkedin_text_gray"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_send" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
